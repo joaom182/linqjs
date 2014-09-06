@@ -1,0 +1,1 @@
+Array.prototype.skip = Array.prototype.slice;
