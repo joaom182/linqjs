@@ -1,0 +1,26 @@
+{
+  "name": "linqjs",
+  "version": "1.0.0",
+  "homepage": "https://github.com/joaom182/linqjs",
+  "authors": [
+    "João Marcos Mainka <joaom182@hotmail.com>"
+  ],
+  "description": "Simple LINQ library for JavaScript",
+  "main": "linq.js",
+  "keywords": [
+    "linq",
+    "javascript",
+    "extension",
+    "methods",
+    "array"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
