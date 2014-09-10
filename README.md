@@ -1,4 +1,9 @@
 linqjs
 ======
 
-Simple LINQ library for JavaScript
+Simple implementation for LINQ C# for JavaScript
+
+##Documentation
+
+
+#####Credits
