@@ -1,14 +1,10 @@
-linqjs
-======
-
 Simple LINQ C# implementation for JavaScript
 
-##Documentation
+#Documentation
 
 The following documentation will be segmented as follows: Aggregations, Iterations, Predicators, and Selectors.
 
-###Selectors
-======
+##Selectors
 
 ####Select
 Projects each element of a sequence into a new form.
@@ -226,8 +222,8 @@ var dic = arr.toDictionary(function(t){ return "Num" + t }, function(u){ return 
 ```
 
 
-###Aggregations
-======
+##Aggregations
+
 
 ####Aggregate
 Applies an accumulator function over a sequence.
@@ -267,8 +263,7 @@ var sum2 = arr2.sum(function(t){ return t.Val });   // 3
 ```
 
 
-###Predicates
-======
+##Predicates
 
 ####Where
 Filters a sequence of values based on a predicate.
@@ -317,8 +312,7 @@ var res2 = arr2.contains({Name:"C", Val:1}, function(a, b){ return a.Val == b.Va
 ```
 
 
-###Iterations
-======
+##Iterations
 
 ####ForEach
 Performs the specified action on each element of the array.
@@ -334,6 +328,8 @@ var arr = [1, 2, 3, 4, 5];
 var res = arr.where(function(t){ return t > 5 }).defaultIfEmpty(5);  // [5]  
 ```
 
-#####Credits
+#Credits
+`
 Special Thanks and Credits to [Kamyar Nazeri](http://www.codeproject.com/script/Membership/View.aspx?mid=4649995).
 I decided to publish this library at GitHub to disseminate knowledge and contribute to the JavaScript community.
+`
