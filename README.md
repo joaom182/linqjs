@@ -1,5 +1,11 @@
 Simple LINQ C# implementation for JavaScript
 
+#Install
+Install using Bower
+```
+bower install linqjs
+```
+
 #Documentation
 
 The following documentation will be segmented as follows: Aggregations, Iterations, Predicators, and Selectors.
