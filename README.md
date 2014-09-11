@@ -8,6 +8,7 @@ Simple LINQ C# implementation for JavaScript
 The following documentation will be segmented as follows: Aggregations, Iterations, Predicators, and Selectors.
 
 ###Selectors
+======
 
 ####Select
 Projects each element of a sequence into a new form.
@@ -226,5 +227,97 @@ var dic = arr.toDictionary(function(t){ return "Num" + t }, function(u){ return 
 
 
 ###Aggregations
+======
+
+####Aggregate
+Applies an accumulator function over a sequence.
+```
+var arr = [1, 2, 3, 4, 5];
+var sum = arr.aggregate(function(a, b){ return a + b }, 0);  // 15   
+```
+
+####Min
+Returns the minimum value in a sequence of values.
+```
+var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+var min1 = arr.min();  // 1 
+
+var arr2 = [{Name:"A", Val:1}, {Name:"B", Val:2}];
+var min2 = arr2.min(function(t){ return t.Val });   // 1 
+```
+
+####Max
+Returns the maximum value in a sequence of values.
+```
+var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+var max1 = arr.max();  // 8 
+
+var arr2 = [{Name:"A", Val:1}, {Name:"B", Val:2}];
+var max2 = arr2.max(function(t){ return t.Val });   // 2 
+```
+
+####Sum
+Computes the sum of a sequence of numeric values.
+```
+var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+var sum1 = arr.sum();  // 36 
+
+var arr2 = [{Name:"A", Val:1}, {Name:"B", Val:2}];
+var sum2 = arr2.sum(function(t){ return t.Val });   // 3 
+```
+
+
+###Predicates
+======
+
+####Where
+Filters a sequence of values based on a predicate.
+```
+var arr = [1, 2, 3, 4, 5];
+var res = arr.where(function(t){ return t > 2 }) ;  // [3, 4, 5] 
+```
+
+####Any
+Determines whether any element of a sequence exists or satisfies a condition.
+```
+var arr = [1, 2, 3, 4, 5];
+var res1 = arr.any();  // true
+var res2 = arr.any(function(t){ return t > 5 });  // false 
+```
+
+####All
+Determines whether all elements of a sequence satisfy a condition.
+```
+var arr = [1, 2, 3, 4, 5];
+var res = arr.all(function(t){ return t < 6 });  // true 
+```
+
+####TakeWhile
+Returns elements from a sequence as long as a specified condition is true, and then skips the remaining elements.
+```
+var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+var res = arr.takeWhile(function(t){ return t % 4 != 0 });  // [1, 2, 3] 
+```
+
+####SkipWhile
+Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.
+```
+var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+var res = arr.skipWhile(function(t){ return t & 4 != 0 }) ;   // [ 4, 5, 6, 7, 8] 
+```
+
+####Contains
+Determines whether a sequence contains a specified element.
+```
+var arr1 = [1, 2, 3, 4, 5]; 
+var res1 = arr.contains(2);  // true 
+
+var arr2 = [{Name:"A", Val:1}, {Name:"B", Val:1}]; 
+var res2 = arr2.contains({Name:"C", Val:1}, function(a, b){ return a.Val == b.Val }) ;  // true
+```
+
+
 
 #####Credits
+Special Thanks and Credits to [Kamyar Nazeri](http://www.codeproject.com/script/Membership/View.aspx?mid=4649995).
+I decided to publish this library at GitHub to disseminate knowledge and contribute to the JavaScript community.
