@@ -329,7 +329,5 @@ var res = arr.where(function(t){ return t > 5 }).defaultIfEmpty(5);  // [5]
 ```
 
 #Credits
-`
 Special Thanks and Credits to [Kamyar Nazeri](http://www.codeproject.com/script/Membership/View.aspx?mid=4649995).
 I decided to publish this library at GitHub to disseminate knowledge and contribute to the JavaScript community.
-`
