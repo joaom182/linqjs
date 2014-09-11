@@ -317,6 +317,22 @@ var res2 = arr2.contains({Name:"C", Val:1}, function(a, b){ return a.Val == b.Va
 ```
 
 
+###Iterations
+======
+
+####ForEach
+Performs the specified action on each element of the array.
+```
+var arr = [1, 2, 3, 4, 5];
+arr.forEach(function(t){ if(t % 2 ==0) console.log(t); });   
+```
+
+####DefaultIfEmpty
+Returns the elements of the specified sequence or the specified value in a singleton collection if the sequence is empty.
+```
+var arr = [1, 2, 3, 4, 5];
+var res = arr.where(function(t){ return t > 5 }).defaultIfEmpty(5);  // [5]  
+```
 
 #####Credits
 Special Thanks and Credits to [Kamyar Nazeri](http://www.codeproject.com/script/Membership/View.aspx?mid=4649995).
