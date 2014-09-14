@@ -2,7 +2,21 @@ Simple LINQ C# implementation for JavaScript
 
 #Install
 ```
-bower install linqjs
+npm install linqjs
+```
+```
+bower install jslinq
+```
+
+#Usage with Node
+```
+require('linqjs');
+\\ Now all LINQ implementation are available.
+```
+
+#Usage to Front-end
+```
+<script src="bower_components/jslinq/linqjs.min.js"></script>
 ```
 
 #Documentation
