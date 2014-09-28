@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
@@ -40,6 +42,12 @@ var scripts = [
 'src/range.js',
 ];
 
+gulp.task('jslint', function() {
+  return gulp.src(['dist/linq.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish));
+});
+
 gulp.task('scripts', function() {
   return gulp.src(scripts)
   .pipe(concat('linq.js'))
@@ -57,4 +65,5 @@ gulp.task('watch', function() {
   gulp.watch(scripts, ['scripts', 'compress']);
 });
 
+gulp.task('travis', ['jslint']);
 gulp.task('default', ['watch', 'scripts', 'compress']);
