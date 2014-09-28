@@ -1,5 +1,5 @@
 Array.prototype.select = Array.prototype.map || function (selector, context) {
-	window = window || {};
+	var window = window || {};
 	context = context || window;
 	var arr = [];
 	var l = this.length;

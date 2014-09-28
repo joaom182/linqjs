@@ -1,5 +1,5 @@
 Array.prototype.all = function (predicate, context) {
-	window = window || {};
+	var window = window || {};
 	context = context || window;
 	predicate = predicate || Predicate;
 	var f = this.every || function (p, c) {
