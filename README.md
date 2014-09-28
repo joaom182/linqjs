@@ -1,4 +1,7 @@
+#LINQJS
 Simple LINQ C# implementation for JavaScript
+
+[![Build Status](https://travis-ci.org/joaom182/linqjs.svg?branch=master)](https://travis-ci.org/joaom182/linqjs)
 
 #Install
 ```
