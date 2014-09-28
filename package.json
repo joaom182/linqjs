@@ -19,6 +19,8 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-exec": "~0.4.2",
     "grunt-simple-mocha": "~0.4.0",
+    "gulp": "^3.8.8",
+    "gulp-concat": "^2.4.1",
     "istanbul": "~0.3.2",
     "load-grunt-tasks": "~0.6.0",
     "mocha": "~1.21.4",
