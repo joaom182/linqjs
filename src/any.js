@@ -1,4 +1,5 @@
 Array.prototype.any = function (predicate, context) {
+	window = window || {};
     context = context || window;
     var f = this.some || function (p, c) {
         var l = this.length;
