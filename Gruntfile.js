@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             files: [
-                'linq.js'
+                'dist/linq.js'
             ]
         },
         watch: {

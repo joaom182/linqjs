@@ -6,7 +6,7 @@
     "João Marcos Mainka <joaom182@hotmail.com>"
   ],
   "description": "Simple LINQ library for JavaScript",
-  "main": "linq.js",
+  "main": "dist/linq.js",
   "keywords": [
     "linq",
     "javascript",
