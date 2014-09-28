@@ -18,6 +18,7 @@ function Selector(t) {
     return t;
 }
 Array.prototype.select = Array.prototype.map || function (selector, context) {
+	window = window || {};
 	context = context || window;
 	var arr = [];
 	var l = this.length;
@@ -28,7 +29,7 @@ Array.prototype.select = Array.prototype.map || function (selector, context) {
 Array.prototype.selectMany = function (selector, resSelector) {
 	resSelector = resSelector || function (i, res) { return res; };
 	return this.aggregate(function (a, b) {
-		return a.concat(selector(b).select(function (res) { return resSelector(b, res) }));
+		return a.concat(selector(b).select(function (res) { return resSelector(b, res); }));
 	}, []);
 };
 Array.prototype.take = function (c) {
@@ -152,7 +153,7 @@ Array.prototype.orderBy = function (selector, comparer) {
 };
 Array.prototype.orderByDescending = function (selector, comparer) {
 	comparer = comparer || SortComparer;
-	return this.orderBy(selector, function (a, b) { return -comparer(a, b) });
+	return this.orderBy(selector, function (a, b) { return -comparer(a, b); });
 };
 Array.prototype.innerJoin = function (arr, outer, inner, result, comparer) {
     comparer = comparer || EqualityComparer;
@@ -210,7 +211,7 @@ Array.prototype.toDictionary = function (keySelector, valueSelector) {
 	var l = this.length;
 	while (l-- > 0) {
 		var key = keySelector(this[l]);
-		if (key == null || key == "") continue;
+		if (key == null || key === '') continue;
 		o[key] = valueSelector(this[l]);
 	}
 	return o;
@@ -249,6 +250,7 @@ Array.prototype.sum = function (s) {
 	return sum;
 };
 Array.prototype.where = Array.prototype.filter || function (predicate, context) {
+	window = window || {};
 	context = context || window;
 	var arr = [];
 	var l = this.length;
@@ -257,6 +259,7 @@ Array.prototype.where = Array.prototype.filter || function (predicate, context) 
 	return arr;
 };
 Array.prototype.any = function (predicate, context) {
+	window = window || {};
     context = context || window;
     var f = this.some || function (p, c) {
         var l = this.length;
@@ -268,6 +271,7 @@ Array.prototype.any = function (predicate, context) {
     return f.apply(this, [predicate, context]);
 };
 Array.prototype.all = function (predicate, context) {
+	window = window || {};
 	context = context || window;
 	predicate = predicate || Predicate;
 	var f = this.every || function (p, c) {
@@ -301,6 +305,7 @@ Array.prototype.contains = function (o, comparer) {
 	return false;
 };
 Array.prototype.forEach = Array.prototype.forEach || function (callback, context) {
+	window = window || {};
 	context = context || window;
 	var l = this.length;
 	for (var i = 0; i < l; i++)
