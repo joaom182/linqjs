@@ -348,9 +348,5 @@ var arr = [1, 2, 3, 4, 5];
 var res = arr.where(function(t){ return t > 5 }).defaultIfEmpty(5);  // [5]  
 ```
 
-#Credits
-Special thanks to [Kamyar Nazeri](http://www.codeproject.com/script/Membership/View.aspx?mid=4649995).
-
-
 #License
 MIT © [João M.](https://twitter.com/joaom182)
