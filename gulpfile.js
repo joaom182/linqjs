@@ -42,27 +42,27 @@ var scripts = [
 'src/range.js',
 ];
 
-gulp.task('jslint', function() {
-  return gulp.src(['dist/linq.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+gulp.task('jslint', function () {
+	return gulp.src(['dist/linq.js'])
+		.pipe(jshint())
+		.pipe(jshint.reporter(stylish));
 });
 
-gulp.task('scripts', function() {
-  return gulp.src(scripts)
-  .pipe(concat('linq.js'))
-  .pipe(gulp.dest('./dist'));
+gulp.task('scripts', function () {
+	return gulp.src(scripts)
+		.pipe(concat('linq.js'))
+		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('compress', function() {
-  gulp.src(['dist/linq.js'])
-  .pipe(concat('linq.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('./dist'))
+gulp.task('compress', function () {
+	gulp.src(['dist/linq.js'])
+		.pipe(concat('linq.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./dist'))
 });
 
-gulp.task('watch', function() {
-  gulp.watch(scripts, ['scripts', 'compress']);
+gulp.task('watch', function () {
+	gulp.watch(scripts, ['scripts', 'compress']);
 });
 
 gulp.task('travis', ['jslint']);

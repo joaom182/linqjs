@@ -1,6 +1,5 @@
 Array.prototype.where = Array.prototype.filter || function (predicate, context) {
-	var window = window || {};
-	context = context || window;
+	context = context || window || global;
 	var arr = [];
 	var l = this.length;
 	for (var i = 0; i < l; i++)

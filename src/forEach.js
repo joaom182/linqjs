@@ -1,6 +1,5 @@
 Array.prototype.forEach = Array.prototype.forEach || function (callback, context) {
-	var window = window || {};
-	context = context || window;
+	context = context || window || global;
 	var l = this.length;
 	for (var i = 0; i < l; i++)
 		callback.call(context, this[i], i, this);
