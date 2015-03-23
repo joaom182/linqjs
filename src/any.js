@@ -1,5 +1,5 @@
 Array.prototype.any = function (predicate, context) {
-	context = context || window || global;
+	context = context || global || window;
 	var f = this.some || function (p, c) {
 		var l = this.length;
 		if (!p) return l > 0;

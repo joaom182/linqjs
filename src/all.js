@@ -1,5 +1,5 @@
 Array.prototype.all = function (predicate, context) {
-	context = context || window || global;
+	context = context || global || window;
 	predicate = predicate || Predicate;
 	var f = this.every || function (p, c) {
 		return this.length == this.where(p, c).length;
