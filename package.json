@@ -1,54 +1,54 @@
 {
-  "name": "linqjs",
-  "version": "0.0.5",
-  "description": "Language Integrated Query for JavaScript",
-  "main": "dist/linq.js",
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joaom182/linqjs.git"
-  },
-  "devDependencies": {
-    "coveralls": "~2.11.0",
-    "expect": "^1.6.0",
-    "expect.js": "~0.3.1",
-    "grunt": "~0.4.4",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-exec": "~0.4.2",
-    "grunt-simple-mocha": "~0.4.0",
-    "gulp": "^3.8.8",
-    "gulp-concat": "^2.4.1",
-    "gulp-jshint": "^1.8.5",
-    "gulp-uglify": "^1.0.1",
-    "istanbul": "~0.3.2",
-    "jshint-stylish": "^1.0.0",
-    "karma": "^0.12.31",
-    "karma-chrome-launcher": "^0.1.8",
-    "karma-firefox-launcher": "^0.1.4",
-    "karma-ie-launcher": "^0.1.5",
-    "karma-mocha": "^0.1.10",
-    "karma-opera-launcher": "^0.1.0",
-    "karma-requirejs": "^0.2.2",
-    "karma-safari-launcher": "^0.1.1",
-    "load-grunt-tasks": "~0.6.0",
-    "mocha": "~1.21.4",
-    "nock": "~0.46.0",
-    "node-uuid": "~1.4.1",
-    "proxyquire": "~1.0.1",
-    "requirejs": "^2.1.17"
-  },
-  "keywords": [
+	"name": "linqjs",
+	"version": "0.0.6",
+	"description": "Language Integrated Query for JavaScript",
+	"main": "dist/linq.js",
+	"scripts": {
+		"test": "mocha test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joaom182/linqjs.git"
+	},
+	"devDependencies": {
+		"coveralls": "~2.11.0",
+		"expect": "^1.6.0",
+		"expect.js": "~0.3.1",
+		"grunt": "~0.4.4",
+		"grunt-cli": "^0.1.13",
+		"grunt-contrib-jshint": "~0.10.0",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-exec": "~0.4.2",
+		"grunt-simple-mocha": "~0.4.0",
+		"gulp": "^3.8.8",
+		"gulp-concat": "^2.4.1",
+		"gulp-jshint": "^1.8.5",
+		"gulp-uglify": "^1.0.1",
+		"istanbul": "~0.3.2",
+		"jshint-stylish": "^1.0.0",
+		"karma": "^0.12.31",
+		"karma-chrome-launcher": "^0.1.8",
+		"karma-firefox-launcher": "^0.1.4",
+		"karma-ie-launcher": "^0.1.5",
+		"karma-mocha": "^0.1.10",
+		"karma-opera-launcher": "^0.1.0",
+		"karma-requirejs": "^0.2.2",
+		"karma-safari-launcher": "^0.1.1",
+		"load-grunt-tasks": "~0.6.0",
+		"mocha": "~1.21.4",
+		"nock": "~0.46.0",
+		"node-uuid": "~1.4.1",
+		"proxyquire": "~1.0.1",
+		"requirejs": "^2.1.17"
+	},
+	"keywords": [
     "javascript",
     "linq"
   ],
-  "author": "João M.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joaom182/linqjs/issues"
-  },
-  "homepage": "https://github.com/joaom182/linqjs"
+	"author": "João M.",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/joaom182/linqjs/issues"
+	},
+	"homepage": "https://github.com/joaom182/linqjs"
 }
