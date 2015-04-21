@@ -1,4 +1,11 @@
-Array.prototype.orderByDescending = function (selector, comparer) {
-	comparer = comparer || SortComparer;
-	return this.orderBy(selector, function (a, b) { return -comparer(a, b); });
-};
+(function () {
+	'use strict';
+
+	Array.prototype.orderByDescending = function (selector, comparer) {
+		comparer = comparer || linq.SortComparer;
+		return this.orderBy(linq.Selector, function (a, b) {
+			return -comparer(a, b);
+		});
+	};
+
+}());

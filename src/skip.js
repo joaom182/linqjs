@@ -1,1 +1,6 @@
-Array.prototype.skip = Array.prototype.slice;
+(function () {
+	'use strict';
+
+	Array.prototype.skip = Array.prototype.slice;
+
+}());

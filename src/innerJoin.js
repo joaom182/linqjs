@@ -1,15 +1,20 @@
-Array.prototype.innerJoin = function (arr, outer, inner, result, comparer) {
-    comparer = comparer || EqualityComparer;
-    var res = [];
+(function () {
+	'use strict';
 
-    this.forEach(function (t) {
-        arr.where(function (u) {
-            return comparer(outer(t), inner(u));
-        })
-        .forEach(function (u) {
-            res.push(result(t, u));
-        });
-    });
+	Array.prototype.innerJoin = function (arr, outer, inner, result, comparer) {
+		comparer = comparer || linq.EqualityComparer;
+		var res = [];
 
-    return res;
-};
+		this.forEach(function (t) {
+			arr.where(function (u) {
+					return comparer(outer(t), inner(u));
+				})
+				.forEach(function (u) {
+					res.push(result(t, u));
+				});
+		});
+
+		return res;
+	};
+
+}());

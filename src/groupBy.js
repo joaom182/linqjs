@@ -1,20 +1,27 @@
-Array.prototype.groupBy = function (selector, comparer) {
-    var grp = [];
-    var l = this.length;
-    comparer = comparer || EqualityComparer;
-    selector = selector || Selector;
+(function () {
+	'use strict';
 
-    for (var i = 0; i < l; i++) {
-        var k = selector(this[i]);
-        var g = grp.first(function (u) { return comparer(u.key, k); });
+	Array.prototype.groupBy = function (selector, comparer) {
+		var grp = [];
+		var l = this.length;
+		comparer = comparer || linq.EqualityComparer;
+		selector = selector || linq.Selector;
 
-        if (!g) {
-            g = [];
-            g.key = k;
-            grp.push(g);
-        }
+		for (var i = 0; i < l; i++) {
+			var k = selector(this[i]);
+			var g = grp.first(function (u) {
+				return comparer(u.key, k);
+			});
 
-        g.push(this[i]);
-    }
-    return grp;
-};
+			if (!g) {
+				g = [];
+				g.key = k;
+				grp.push(g);
+			}
+
+			g.push(this[i]);
+		}
+		return grp;
+	};
+
+}());
