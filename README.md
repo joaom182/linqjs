@@ -9,13 +9,13 @@ npm install linqjs
 bower install jslinq
 ```
 
-#Usage with node / iojs
+#Usage in node / iojs applications
 ```
 require('linqjs');
 \\ Now all LINQ implementation are available.
 ```
 
-#Usage to Front-end
+#Usage in browsers
 ```
 <script src="bower_components/jslinq/linqjs.min.js"></script>
 ```
