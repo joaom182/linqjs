@@ -1,5 +1,5 @@
 #LINQJS
-Simple LINQ C# implementation for JavaScript
+Simple LINQ C# implementation compatible with node, iojs and browser.
 
 #Install [![Build Status](https://travis-ci.org/joaom182/linqjs.svg?branch=master)](https://travis-ci.org/joaom182/linqjs)
 ```
@@ -9,7 +9,7 @@ npm install linqjs
 bower install jslinq
 ```
 
-#Usage with Node
+#Usage with Node / iojs
 ```
 require('linqjs');
 \\ Now all LINQ implementation are available.
