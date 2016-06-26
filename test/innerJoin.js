@@ -121,5 +121,43 @@ describe('innerJoin', function () {
 
 		done();
 	});
+	
+	it('Should correlates the elements of two sequences based on matching keys without resultSelector or comparer', function (done) {
+		var arr1 = [{
+			Name: 'A',
+			Val: 1
+		}, {
+			Name: 'B',
+			Val: 2
+		}, {
+			Name: 'C',
+			Val: 3
+		}];
 
+		var arr2 = [{
+			Code: 'A'
+		}, {
+			Code: 'B'
+		}, {
+			Name: 'C',
+			Code: 'C'
+		}];
+
+		var res2 = arr1.innerJoin(arr2,
+			function (t) {
+				return t.Name;
+			},
+			function (u) {
+				return u.Code;
+			});
+
+		expect(res2).to.be.an(Array);
+		expect(res2[0]).to.be.an(Array);
+		expect(res2[0].length).to.have.lengthOf(2);
+		expect(res2[0]).to.be([arr1[0], [arr2[0]);
+		expect(res2[1]).to.be([arr1[1], [arr2[1]);
+		expect(res2[2]).to.be([arr1[2], [arr2[2]);
+
+		done();
+	});
 });
