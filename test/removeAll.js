@@ -1,5 +1,5 @@
 var expect = require('expect.js');
-require('../dist/linq.js');
+require('../dist/linq.min.js');
 
 describe('removeAll', function () {
 
