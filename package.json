@@ -42,9 +42,9 @@
 		"requirejs": "^2.1.17"
 	},
 	"keywords": [
-    "javascript",
-    "linq"
-  ],
+		"javascript",
+		"linq"
+	],
 	"author": "João M.",
 	"license": "MIT",
 	"bugs": {
