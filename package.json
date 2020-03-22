@@ -51,5 +51,5 @@
 		"url": "https://github.com/joaom182/linqjs/issues"
 	},
 	"homepage": "https://github.com/joaom182/linqjs",
-	"publishConfig": { "registry": "https://npm.pkg.github.com/" }
+	"publishConfig": { "registry": "https://npm.pkg.github.com/joaom182" }
 }
