@@ -1,6 +1,6 @@
 {
 	"name": "linqjs",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Language Integrated Query for JavaScript",
 	"main": "dist/linq.js",
 	"scripts": {
@@ -50,5 +50,6 @@
 	"bugs": {
 		"url": "https://github.com/joaom182/linqjs/issues"
 	},
-	"homepage": "https://github.com/joaom182/linqjs"
+	"homepage": "https://github.com/joaom182/linqjs",
+	"publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
